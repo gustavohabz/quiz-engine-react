@@ -35,7 +35,7 @@ function App() {
   return (
     <main >
       <div className="row">
-        <div className="col-6 col-xs-12 center-vertical-horizontal">
+        <div className="col-6 col-xs-10 center-vertical-horizontal">
           <div className="card rounded">
             {pageHeader}
             {pageContent}

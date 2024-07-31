@@ -16,7 +16,7 @@ export const CustomCheckbox = (
             onChange={(e) => changeCheckbox(e)}
             disabled={disabled}
         />
-        {inputOptions.label}
+        <span className="input-label">{inputOptions.label}</span>
     </label>
   )
 }

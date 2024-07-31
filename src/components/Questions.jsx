@@ -176,7 +176,7 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
 
   return (
     <>
-    {(questionNumber <= 10 ?  (<>
+    {(questionNumber <= questionList.length ?  (<>
         {questionList.map((question, index) => (
         <section key={question.id} hidden={index != questionNumber-1} className="question-section">
             <div className="card-title text-center">
@@ -267,7 +267,7 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
         ))}
     </>) : (
         <>
-            <div className="row">
+            <div className="row" style={{paddingTop: '1.5%'}}>
                 <div className="col-12 text-center">
                     <h1>Correct Answers: {correctAnswerCounter}</h1>
                     <h1>Wrong Answers: {wrongAnswerCounter}</h1>
@@ -284,7 +284,7 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
     <div className="row mt-2">
         <div className="col-12 col-xs-12">
             <div className="progress">
-                <div className={"progress-bar "+(questionNumber*9.5 < 100 ? "progress-blue" : "progress-teal")} style={{width: questionNumber*9.5+'%'}}></div>
+                <div className={"progress-bar "+(questionNumber*questionList.length -1 < 100 ? "progress-blue" : "progress-teal")} style={{width: questionNumber*questionList.length - 1+'%'}}></div>
             </div>
         </div>
     </div>

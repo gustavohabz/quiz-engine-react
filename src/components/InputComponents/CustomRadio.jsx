@@ -7,7 +7,7 @@ export const CustomRadio = ({
       let classCorrect = ''
       if(showCorrectAnswer && correctAnswer) classCorrect = 'correct-answer '
   return (
-    <label htmlFor={inputOptions.id} className={"input-checkbox block "+classCorrect}>
+    <label htmlFor={inputOptions.id} className={"input-radio block "+classCorrect}>
         <input 
             name={inputOptions.name}
             id={inputOptions.id} 
@@ -16,7 +16,8 @@ export const CustomRadio = ({
             onChange={(e) => changeRadio(e)}
             disabled={disabled}
         />
-        {inputOptions.label}
+        <span className='custom-radio'></span>
+        <span className="input-label">{inputOptions.label}</span>
     </label>
   )
 }

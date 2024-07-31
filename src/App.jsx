@@ -28,16 +28,14 @@ function App() {
 
   const messageClass = (isCorrectAnswer ? 'alert-success' : 'alert-error')
 
-  const answerElement = <div className="col-12 text-center mt-2">
-                            <div className={"alert "+messageClass}>
-                                { isCorrectAnswer ? 'Correct answer!' : 'Incorrect answer!'}
-                            </div>
+  const answerElement = <div className={"text-center mt-2 alert "+messageClass}>
+                            { isCorrectAnswer ? 'Correct answer!' : 'Incorrect answer!'}
                         </div>
 
   return (
     <main >
       <div className="row">
-        <div className="col-6 center-vertical-horizontal">
+        <div className="col-6 col-xs-12 center-vertical-horizontal">
           <div className="card rounded">
             {pageHeader}
             {pageContent}

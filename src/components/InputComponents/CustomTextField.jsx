@@ -13,7 +13,7 @@ export const CustomTextField = ({inputOptions, disabled, answer, showCorrectAnsw
           value={userAnswer}
           onChange={changeTextField}
         />
-        {showCorrectAnswer && 'The answer is: '+answer}
+        <p style={{position: 'absolute'}}>{showCorrectAnswer && 'The answer is: '+answer}</p>
       </div>
     </div>
   )

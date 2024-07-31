@@ -1,1 +1,1 @@
-# Quiz engine developed for "SiPhox Health" task 1
+# Quiz engine built in React, developed for "SiPhox Health" task 1

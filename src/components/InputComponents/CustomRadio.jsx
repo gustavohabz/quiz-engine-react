@@ -1,7 +1,11 @@
 import React from 'react'
 
 export const CustomRadio = ({
-  inputOptions, changeRadio, disabled, answer, showCorrectAnswer}) => {
+  inputOptions, 
+  changeRadio, 
+  disabled, 
+  answer, 
+  showCorrectAnswer}) => {
 
       const correctAnswer = (answer === parseInt(inputOptions.value))
       let classCorrect = ''
@@ -16,7 +20,7 @@ export const CustomRadio = ({
             onChange={(e) => changeRadio(e)}
             disabled={disabled}
         />
-        <span className='custom-radio'></span>
+        <span className={'custom-radio'}></span>
         <span className="input-label">{inputOptions.label}</span>
     </label>
   )

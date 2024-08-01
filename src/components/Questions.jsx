@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import QuestionJSON from './../questions/QuestionSet.json'
+import QuestionThemesJSON from './../questions/QuestionSetThemes.json'
 import { FinalCardContent } from './FinalCardContent'
 import { ProgressBar } from './ProgressBar'
 import { QuestionForm } from './QuestionForm'
 
-export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAnswered, setCurrentPage}) => {
+export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAnswered, setCurrentPage, theme}) => {
     const [questionNumber, setQuestionNumber] = useState(1)
     const [userAnswer, setUserAnswer] = useState('')
     const [questionList, setQuestionList] = useState([])
@@ -59,7 +60,7 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
     }
 
     const fetchQuestionSet = () => {
-        setQuestionList(randomizeQuestions(QuestionJSON.questionSet))
+        setQuestionList(randomizeQuestions(QuestionThemesJSON.themes[theme]))
     }
 
     const validateCheckboxQuestion = (value, answer) => {
@@ -145,7 +146,7 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
     const resetGame = () => {
         clearStates()
         setQuestionNumber(1)
-        setCurrentPage('main')
+        setCurrentPage('themeSelection')
     }
 
     useEffect(() => {

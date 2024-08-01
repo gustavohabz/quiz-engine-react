@@ -1,9 +1,10 @@
 body {
-  font-family: roboto;
+  font-family: 'Roboto';
 }
 
 .card {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+border: none;
 }
 
 .text-left {
@@ -31,6 +32,39 @@ body {
   padding-left: 1.5%;
 }
 
+.progress {
+  display: flex;
+  overflow: hidden;
+  font-size: .75rem;
+}
+
+.progress-blue {
+  background-color: #00b7ff;
+  color: #fff;
+}
+
+.progress-teal {
+  background-color: teal;
+  color: #fff;
+}
+
+.progress-bar {
+  display: flex;
+  height: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  transition: width .6s ease;
+}
+
+.card-title h2 {
+  font-weight: 500;
+}
 
 @media screen and (max-width: 992px){
   .col-xs-10 {
@@ -39,20 +73,23 @@ body {
   .col-xs-12 {
     width: 100%;
   }
+
   .center-vertical-horizontal {
     margin: 0;
     top: 50%;
     left: 8.3%;
+    width: 83.4%;
     position: absolute;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   } 
+  
   .card-content {
     padding-bottom: 3.5%;
     padding-right: 5%;
     padding-left: 5%;
   }
-  
+
   .card-title {
     margin-bottom: 6em;
     padding-top: 2.5%;
@@ -62,6 +99,9 @@ body {
 }
 
 @media screen and (min-width: 992px){
+  .answer-text {
+    position: absolute;
+  }
   .col-6 {
     width: 50%;
     display: inline-block;
@@ -75,7 +115,8 @@ body {
   .center-vertical-horizontal {
     margin: 0;
     top: 50%;
-    left: 25%;
+    left: 30%;
+    width: 40%;
     position: absolute;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -117,6 +158,32 @@ body {
   color: #ffffff;
 }
 
+.btn-primary:disabled{
+  cursor: auto;
+  background-color: rgb(63, 117, 117);
+  border-color: rgb(63, 117, 117);
+  color: #ffffff;
+}
+
+.btn-primary:disabled:hover{
+  cursor: auto;
+  background-color: rgba(63, 117, 117, 0.459);
+  border-color: rgba(63, 117, 117, 0.459);
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: rgb(0, 204, 255);
+  border-color: rgb(0, 204, 255);
+  color: #ffffff;
+}
+
+.btn-primary:hover{
+  background-color: rgb(0, 165, 206);
+  border-color: rgb(0, 165, 206);
+  color: #ffffff;
+}
+
 .btn-transparent {
   background-color: transparent;
   border-color: transparent;
@@ -124,7 +191,7 @@ body {
 }
 
 .btn-transparent:hover {
-  background-color: #5555550c;
+  background-color: #55555527;
 }
 
 .btn-teal:hover {
@@ -134,7 +201,7 @@ body {
 }
 
 .rounded {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .circle {
@@ -151,14 +218,19 @@ body {
   padding-left: 40px;
 }
 
+.fake-checked {
+  background-color: #2195f39f !important;
+}
+
+.wrong-radio-option {
+  background-color: #ff0000af;
+}
+
+
+
 .input-radio input{
   margin-bottom: 4%;
   margin-right: 4%;
-  transition: all 0.5s ease;
-}
-
-.input-checkbox{
-  padding-bottom: 3%;
   transition: all 0.5s ease;
 }
 
@@ -190,12 +262,12 @@ body {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eeeeeeaf;
+  background-color: #e4e4e4;
   border-radius: 50%;
 }
 
 .input-radio:hover input ~ .custom-radio {
-  background-color: #cccccca4;
+  background-color: #cccccc;
   transition: 0.5s ease;
 }
 
@@ -204,7 +276,7 @@ body {
 }
 
 .input-radio input:checked ~ .custom-radio {
-  background-color: #2195f39f;
+  background-color: #2195f3dc;
 }
 
 .input-radio:after {
@@ -249,7 +321,7 @@ body {
   border: 1px solid;
   border-color: rgba(124, 124, 124, 0.253);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.250);
-  font-weight: 200;
+  font-weight: 300;
   padding: 5%;
   animation: fadeIn ease 0.5s;
 }
@@ -287,6 +359,10 @@ body {
   color: #ff0000;
 }
 
+.input-label {
+  font-weight: 400;
+}
+
 .correct-answer .input-label{
   border: 1px solid;
   border-color: #0000002f;
@@ -310,6 +386,8 @@ body {
   border: 1px solid;
   border-color: #00000034;
   padding: 3%;
+  padding-right: 0;
+  width: inherit;
   font-size: 20px;
 }
 input:focus{
@@ -318,37 +396,53 @@ input:focus{
   outline: none;
 }
 
-.progress {
-  border: 1px solid;
-  border-color: #00000017;
-  border-bottom: none;
-  display: flex;
-  overflow: hidden;
-  font-size: .75rem;
-  background-color: #0000000e;
-  border-radius: .25rem;
+.image-frame img{
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 100px;
+  min-width: 180px;
+  filter: drop-shadow(4px 4px 4px #00000056);
 }
 
-.progress-blue {
-  background-color: #00b7ff;
-  color: #fff;
+.main-title {
+  filter: drop-shadow(4px 4px 4px #00000028);
 }
 
-.progress-teal {
-  background-color: teal;
-  color: #fff;
+.btn-geography {
+ background-color: #DE9F40;
+ border-color: #DE9F40;
+ min-width: 10em;
+ height: 4em;
+ border-radius: 50px 0px 0px 0px;
 }
 
-.progress-bar {
-  display: flex;
-  height: 15px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  transition: width .6s ease;
+.btn-geography:hover {
+  background-color: #ca903a;
+  border-color: #ca903a;
+ }
+
+.btn-history {
+  background-color: #40DE75;
+  border-color: #40DE75;
+  height: 4em;
+  border-radius: 0px 50px 0px 0px;
+}
+
+.btn-technology {
+  background-color: #40DECE;
+  border-color: #40DECE;
+  height: 4em;
+  border-radius: 0px 0px 0px 50px;
+}
+
+.btn-animals {
+  background-color: #4B5E5C;
+  border-color: #4B5E5C;
+  color: #ffffff;
+  height: 4em;
+  border-radius: 0px 0px 50px 0px;
+}
+.buttons-themes {
 }

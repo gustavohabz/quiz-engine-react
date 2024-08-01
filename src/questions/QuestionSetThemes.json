@@ -1,0 +1,477 @@
+{
+    "themes":  {
+                        "GEOGRAPHY": [
+                                        {
+                                            "question": "What is the capital of Brazil?",
+                                            "id": 1,
+                                            "type": "ONE",
+                                            "answer": 3,
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Planalto_Central_%28cropped%29.jpg/1920px-Planalto_Central_%28cropped%29.jpg",
+                                            "options": [
+                                                {"id": 1, "label": "São Paulo", "value": 1},
+                                                {"id": 2, "label": "Minas Gerais", "value": 2},
+                                                {"id": 3, "label": "Brasília", "value": 3},
+                                                {"id": 4, "label": "Buenos Aires", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "How many days does it take for the Earth to orbit the Sun?",
+                                            "id": 2,
+                                            "type": "ONE",
+                                            "answer": 2,
+                                            "questionImage": "https://www.worldatlas.com/r/w960-q80/upload/4c/55/b8/untitled-design-163.jpg",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "360", "value": 1},
+                                                {"id": 2, "label": "365", "value": 2},
+                                                {"id": 3, "label": "224", "value": 3},
+                                                {"id": 4, "label": "400", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What is the capital of South Korea?",
+                                            "id": 3,
+                                            "type": "TEXT",
+                                            "answer": "SEUL",
+                                            "questionImage": "",
+                                            "answerImage": "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/11/apartamentos-em-seul-coreia-do-sul-para-comprar-1170x780.jpg.optimal.jpg",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "What's the smallest country in the world?",
+                                            "id": 4,
+                                            "type": "TEXT",
+                                            "answer": "VATICAN",
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg/1920px-St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "Which of these countries are in South America?",
+                                            "id": 5,
+                                            "type": "MULTI",
+                                            "answer": [1, 2, 4],
+                                            "questionImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/South_America_-_Blue_Marble_orthographic.jpg/800px-South_America_-_Blue_Marble_orthographic.jpg",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "Chile", "value": 1},
+                                                {"id": 2, "label": "Uruguay", "value": 2},
+                                                {"id": 3, "label": "Mexico", "value": 3},
+                                                {"id": 4, "label": "Guiana", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What continent is 'Laos' located?",
+                                            "id": 6,
+                                            "type": "TEXT",
+                                            "answer": "ASIA",
+                                            "questionImage": "https://s2.static.brasilescola.uol.com.br/be/2022/06/paisagem-van-vieng-laos.jpg",
+                                            "answerImage": "",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "Which of these countries speak portuguese?",
+                                            "id": 7,
+                                            "type": "ONE",
+                                            "answer": 3,
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/1280px-Flag_of_Angola.svg.png",
+                                            "options": [
+                                                {"id": 1, "label": "Nigeria", "value": 1},
+                                                {"id": 2, "label": "Cameron", "value": 2},
+                                                {"id": 3, "label": "Angola", "value": 3},
+                                                {"id": 4, "label": "Bolivia", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What is the northernmost country in the world?",
+                                            "id": 8,
+                                            "type": "ONE",
+                                            "answer": 2,
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_Greenland.svg/1280px-Flag_of_Greenland.svg.png",
+                                            "options": [
+                                                {"id": 1, "label": "Sweden", "value": 1},
+                                                {"id": 2, "label": "Greenland", "value": 2},
+                                                {"id": 3, "label": "Canada", "value": 3},
+                                                {"id": 4, "label": "Russia", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What is a tundra?",
+                                            "id": 9,
+                                            "type": "ONE",
+                                            "answer": 4,
+                                            "questionImage": "",
+                                            "answerImage": "https://s1.static.brasilescola.uol.com.br/be/2021/06/himalaia.jpg",
+                                            "options": [
+                                                {"id": 1, "label": "A warm and humid biome with plenty of swamps", "value": 1},
+                                                {"id": 2, "label": "A balanced biome with moderate winters", "value": 2},
+                                                {"id": 3, "label": "A biome composed mostly by sand and lack of vegetation", "value": 3},
+                                                {"id": 4, "label": "An extremely cold biome with few vegetation", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What is the most common climate zone in Europe?",
+                                            "id": 10,
+                                            "type": "ONE",
+                                            "answer": 1,
+                                            "questionImage": "https://preview.redd.it/4k-political-map-of-europe-clean-v0-tus9h0hpr89a1.png?width=640&crop=smart&auto=webp&s=5438801b371af970cae84b76edca14124478af33",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "Temperate Zone", "value": 1},
+                                                {"id": 2, "label": "Subpolar Zone", "value": 2},
+                                                {"id": 3, "label": "Cold Zone", "value": 3},
+                                                {"id": 4, "label": "Mid Zone", "value": 4}
+                                            ]
+                                        }
+                                    ],
+                        "HISTORY": [
+                                        {
+                                            "question": "What year did man land on the moon?",
+                                            "id": 1,
+                                            "type": "ONE",
+                                            "answer": 1,
+                                            "questionImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202407/apollo-11-moon-landing-190417148-16x9_0.jpg?VersionId=Hkrlq9ee2i_lY8Ul7yoDOAqIek_C1CF.&size=690:388",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "1969", "value": 1},
+                                                {"id": 2, "label": "1958", "value": 2},
+                                                {"id": 3, "label": "1963", "value": 3},
+                                                {"id": 4, "label": "1975", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "When was the USA founded?",
+                                            "id": 2,
+                                            "type": "ONE",
+                                            "answer": 1,
+                                            "questionImage": "https://www.searchablemuseum.com/static/a3aac586827071a8d11a6bde5913e991/e2406/SMSF222-trumbell_Yale.webp",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "July 1776", "value": 1},
+                                                {"id": 2, "label": "June 1850", "value": 2},
+                                                {"id": 3, "label": "April 1700", "value": 3},
+                                                {"id": 4, "label": "July 1770", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Who was the last Tsar of Russia?",
+                                            "id": 3,
+                                            "type": "ONE",
+                                            "answer": 3,
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Mikola_II_%28cropped%29-2.jpg/800px-Mikola_II_%28cropped%29-2.jpg",
+                                            "options": [
+                                                {"id": 1, "label": "Alexander III", "value": 1},
+                                                {"id": 2, "label": "Vladimir Lenin", "value": 2},
+                                                {"id": 3, "label": "Nicholas II", "value": 3},
+                                                {"id": 4, "label": "Rasputin", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What did Robert J. Oppenheimer build during World War 2?",
+                                            "id": 4,
+                                            "type": "ONE",
+                                            "answer": 4,
+                                            "questionImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Oppenheimer_%28cropped%29.jpg/800px-Oppenheimer_%28cropped%29.jpg",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "Nuclear Power", "value": 1},
+                                                {"id": 2, "label": "Particle Accelerator", "value": 2},
+                                                {"id": 3, "label": "Atomic reactor", "value": 3},
+                                                {"id": 4, "label": "The atomic bomb", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Which of these countries were part of the allies during World War 2?",
+                                            "id": 5,
+                                            "type": "MULTI",
+                                            "answer": [1,2,4],
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Naciones_Unidas_3.jpg",
+                                            "options": [
+                                                {"id": 1, "label": "United States of America", "value": 1},
+                                                {"id": 2, "label": "Soviet Union", "value": 2},
+                                                {"id": 3, "label": "Switzerland", "value": 3},
+                                                {"id": 4, "label": "Brazil", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Which of these countries were part of the Roman Empire?",
+                                            "id": 6,
+                                            "type": "MULTI",
+                                            "answer": [1,3,4],
+                                            "questionImage": "https://blog.filmustage.com/content/images/size/w1000/2023/10/lenahawk_the_Roman_Empire_1fc5b1ec-0e55-446b-b7e3-eb291ff9842a.png",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "Italy", "value": 1},
+                                                {"id": 2, "label": "Russia", "value": 2},
+                                                {"id": 3, "label": "Spain", "value": 3},
+                                                {"id": 4, "label": "Britain", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Who fought in the Hundred Year's War?",
+                                            "id": 7,
+                                            "type": "MULTI",
+                                            "answer": [1,2],
+                                            "questionImage": "",
+                                            "answerImage": "https://cdn.britannica.com/28/187128-050-4361971B/Battle-of-Crecy-Image-Philip-VI-England-August-26-1346.jpg",
+                                            "options": [
+                                                {"id": 1, "label": "Britain", "value": 1},
+                                                {"id": 2, "label": "France", "value": 2},
+                                                {"id": 3, "label": "Spain", "value": 3},
+                                                {"id": 4, "label": "Germany", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Which fabric was invented in Ancient China?",
+                                            "id": 8,
+                                            "type": "TEXT",
+                                            "answer": "SILK",
+                                            "questionImage": "",
+                                            "answerImage": "https://i0.wp.com/lalouettesilk.com/wp-content/uploads/2019/08/ancient-chinese-court-ladies-preparing-silk.jpg?resize=500%2C308&ssl=1",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "What year was Brazil 'discovered'?",
+                                            "id": 9,
+                                            "type": "TEXT",
+                                            "answer": "1500",
+                                            "questionImage": "https://s1.static.brasilescola.uol.com.br/be/2020/03/descobrimento-brasil.jpg",
+                                            "answerImage": "",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "What year did the chilean military dictatorship end?",
+                                            "id": 10,
+                                            "type": "TEXT",
+                                            "answer": "1990",
+                                            "questionImage": "",
+                                            "answerImage": "",
+                                            "options": []
+                                        }
+                                    ],
+                        "TECHNOLOGY": [
+                                        {
+                                            "question": "Which of these services are provided by Google?",
+                                            "id": 1,
+                                            "type": "MULTI",
+                                            "answer": [2, 4],
+                                            "questionImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "AWS", "value": 1},
+                                                {"id": 2, "label": "Drive", "value": 2},
+                                                {"id": 3, "label": "TV+", "value": 3},
+                                                {"id": 4, "label": "Earth", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What year was the game 'Half-Life 2' released?",
+                                            "id": 2,
+                                            "type": "ONE",
+                                            "answer": 4,
+                                            "questionImage": "https://cdn.akamai.steamstatic.com/half-life.com/images/halflife2/halflife2_1.jpg",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "2010", "value": 1},
+                                                {"id": 2, "label": "2006", "value": 2},
+                                                {"id": 3, "label": "1999", "value": 3},
+                                                {"id": 4, "label": "2004", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Which of these are considered backend programming languages?",
+                                            "id": 3,
+                                            "type": "MULTI",
+                                            "answer": [2, 3],
+                                            "questionImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/chris-ried-ieic5Tq8YMk-unsplas_1200x768.jpeg?size=690:388",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "JavaScript, Java, PHP", "value": 1},
+                                                {"id": 2, "label": "Go, C#, Java", "value": 2},
+                                                {"id": 3, "label": "PHP, Ruby, Kotlin", "value": 3},
+                                                {"id": 4, "label": "C++, HTML, Python", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Who invented the tesla oscillator?",
+                                            "id": 4,
+                                            "type": "ONE",
+                                            "answer": 2,
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Tesla_circa_1890.jpeg/800px-Tesla_circa_1890.jpeg",
+                                            "options": [
+                                                {"id": 1, "label": "Niels Bohr", "value": 1},
+                                                {"id": 2, "label": "Nikola Tesla", "value": 2},
+                                                {"id": 3, "label": "Marie Curie", "value": 3},
+                                                {"id": 4, "label": "John Dalton", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Which of these are mobile development languages/frameworks?",
+                                            "id": 5,
+                                            "type": "MULTI",
+                                            "answer": [1, 2, 3, 4],
+                                            "questionImage": "https://www.aventussoftware.com/wp-content/uploads/2023/06/vaival-application.png",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "Swift", "value": 1},
+                                                {"id": 2, "label": "Kotlin", "value": 2},
+                                                {"id": 3, "label": "Flutter", "value": 3},
+                                                {"id": 4, "label": "React Native", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Who wrote the first algorithm?",
+                                            "id": 6,
+                                            "type": "ONE",
+                                            "answer": 3,
+                                            "questionImage": "",
+                                            "answerImage": "https://s2-techtudo.glbimg.com/XtrC_09PCNe8fjRvEmK2AMOAOPQ=/0x0:1200x675/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/r/j/X00R0WS22lOFjrfvQYgg/5f15f3509f331.jpeg",
+                                            "options": [
+                                                {"id": 1, "label": "Herman Hollerith", "value": 1},
+                                                {"id": 2, "label": "Alan Turing", "value": 2},
+                                                {"id": 3, "label": "Ada Lovelace", "value": 3}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What are floppy disks?",
+                                            "id": 7,
+                                            "type": "ONE",
+                                            "answer": 2,
+                                            "questionImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Floppy_disk_2009_G1.jpg/1280px-Floppy_disk_2009_G1.jpg",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "A processor for old computers", "value": 1},
+                                                {"id": 2, "label": "A device that stores, distributes and transfers data", "value": 2},
+                                                {"id": 3, "label": "A malleable DVD", "value": 3}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What is the name of Apple's web browser?",
+                                            "id": 8,
+                                            "type": "TEXT",
+                                            "answer": "SAFARI",
+                                            "questionImage": "",
+                                            "answerImage": "https://www.lifewire.com/thmb/fauUa4Ecq1St6U7D05-f3m1UVb4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Untitled-d9a04375d87b425e8e5e8e5054c7f1e1.jpg",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "What is the name of Apple's mobile operating system?",
+                                            "id": 9,
+                                            "type": "TEXT",
+                                            "answer": "IOS",
+                                            "questionImage": "",
+                                            "answerImage": "https://guiadoiphone.com.br/wp-content/uploads/2023/05/guia-do-iphone-introducao-ao-ios-capa.jpg",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "What's the name of the penguin operating system?",
+                                            "id": 10,
+                                            "type": "TEXT",
+                                            "answer": "LINUX",
+                                            "questionImage": "",
+                                            "answerImage": "https://hermes.dio.me/articles/cover/e7e20e8b-59e3-491e-8567-fca22d61f84f.png",
+                                            "options": []
+                                        }
+                                    ],
+                        "ANIMALS": [
+                                        {
+                                            "question": "Why do penguins stick togheter?",
+                                            "id": 1,
+                                            "type": "ONE",
+                                            "answer": 3,
+                                            "questionImage": "https://c02.purpledshub.com/uploads/sites/62/2022/06/5014474-12693ff.jpg?w=940&webp=1",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "So they can protect each other from predators", "value": 1},
+                                                {"id": 2, "label": "They like it", "value": 2},
+                                                {"id": 3, "label": "To preserve temperature and stay warm", "value": 3},
+                                                {"id": 4, "label": "To hunt other animals", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What animal's laugh is a reaction to being threatened?",
+                                            "id": 2,
+                                            "type": "ONE",
+                                            "answer": 4,
+                                            "questionImage": "",
+                                            "answerImage": "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSJZFhPLzJgkyHnH2lhOL8Q-eHKVBuq7y5Y6Ik5qddTUqwwPmUIWt-E5es0wmJFJ8gd",
+                                            "options": [
+                                                {"id": 1, "label": "Cow", "value": 1},
+                                                {"id": 2, "label": "Lion", "value": 2},
+                                                {"id": 3, "label": "Baboon", "value": 3},
+                                                {"id": 4, "label": "Hyena", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Which of these animals is a marsupial?",
+                                            "id": 3,
+                                            "type": "ONE",
+                                            "answer": 3,
+                                            "questionImage": "",
+                                            "answerImage": "https://preview.redd.it/7wsqyi9vmhab1.jpg?width=640&crop=smart&auto=webp&s=fd933feb986e56d62495d33bf8f8e7a7f2e82a9b",
+                                            "options": [
+                                                {"id": 1, "label": "Dog", "value": 1},
+                                                {"id": 2, "label": "Elephant Seal", "value": 2},
+                                                {"id": 3, "label": "Koala", "value": 3},
+                                                {"id": 4, "label": "Giraffe", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What is the world's biggest mamal?",
+                                            "id": 4,
+                                            "type": "ONE",
+                                            "answer": 1,
+                                            "questionImage": "",
+                                            "answerImage": "https://files.worldwildlife.org/wwfcmsprod/images/Blue_Whale/hero_full/ybr2e55kd_shutterstock_764499823.jpg",
+                                            "options": [
+                                                {"id": 1, "label": "Blue Whale", "value": 1},
+                                                {"id": 2, "label": "Elephant", "value": 2},
+                                                {"id": 3, "label": "Giraffe", "value": 3},
+                                                {"id": 4, "label": "Manatee Fish", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "Complete the sentence: 'The [...] bones are porous bones which allow birds to be lighter and set flight'",
+                                            "id": 5,
+                                            "type": "TEXT",
+                                            "answer": "PNEUMATIC",
+                                            "questionImage": "",
+                                            "answerImage": "https://qph.cf2.quoracdn.net/main-qimg-0a07b560ec22afeae2c7d0b0766a5f26-lq",
+                                            "options": []
+                                        },
+                                        {
+                                            "question": "Which of these birds don't fly?",
+                                            "id": 6,
+                                            "type": "MULTI",
+                                            "answer": [1, 3],
+                                            "questionImage": "",
+                                            "answerImage": "",
+                                            "options": [
+                                                {"id": 1, "label": "Ostrich", "value": 1},
+                                                {"id": 2, "label": "Penguin", "value": 2},
+                                                {"id": 3, "label": "Peacock", "value": 3},
+                                                {"id": 4, "label": "Blue Jay", "value": 4}
+                                            ]
+                                        },
+                                        {
+                                            "question": "What is the world's smallest bird?",
+                                            "id": 7,
+                                            "type": "ONE",
+                                            "answer": 1,
+                                            "questionImage": "",
+                                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bee_hummingbird_%28Mellisuga_helenae%29_adult_male_in_flight-cropped.jpg/1024px-Bee_hummingbird_%28Mellisuga_helenae%29_adult_male_in_flight-cropped.jpg",
+                                            "options": [
+                                                {"id": 1, "label": "Bee Hummingbird", "value": 1},
+                                                {"id": 2, "label": "Hummingbird", "value": 2},
+                                                {"id": 3, "label": "Monarch Butterfly", "value": 3}
+                                            ]
+                                        }
+                                    ]
+                }
+}

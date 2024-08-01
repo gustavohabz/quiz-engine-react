@@ -19,6 +19,24 @@ export const QuestionForm = ({
 }) => {
   return (
     <form onSubmit={(e) => confirmAnswerSubmit(e)}>
+        {(question.questionImage && (
+            <div className={getColClass(question)}>
+                <div className='image-frame'>
+                    <figure>
+                        <img loading="lazy" src={question.questionImage} alt="" />
+                    </figure>
+                </div>
+            </div>
+        ))}
+        {(isAnswered && question.answerImage && !question.questionImage && (
+            <div className={getColClass(question)}>
+                <div className='image-frame'>
+                    <figure>
+                        <img loading="lazy" src={question.answerImage} alt="" />
+                    </figure>
+                </div>
+            </div>
+        ))}
         <div className="row">
             <div className={getColClass(question)}>
                 <h3>
@@ -32,7 +50,6 @@ export const QuestionForm = ({
                                     disabled={isAnswered}
                                     answer={question.answer}
                                     showCorrectAnswer={isAnswered && !isCorrectAnswer}
-                                    userAnswer={userAnswer}
                                 />
                             ))}
                         </>
@@ -48,7 +65,6 @@ export const QuestionForm = ({
                                     disabled={isAnswered}
                                     answer={question.answer}
                                     showCorrectAnswer={isAnswered && !isCorrectAnswer}
-                                    userAnswer={userAnswer}
                                 />
                             ))}
                         </>

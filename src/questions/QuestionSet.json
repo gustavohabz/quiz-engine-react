@@ -1,10 +1,12 @@
 {
-    "questionSet": [
+    "questionSet":  [
                         {
                             "question": "What is the capital of Brazil?",
                             "id": 1,
                             "type": "ONE",
                             "answer": 3,
+                            "questionImage": "",
+                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Planalto_Central_%28cropped%29.jpg/1920px-Planalto_Central_%28cropped%29.jpg",
                             "options": [
                                 {"id": 1, "label": "São Paulo", "value": 1},
                                 {"id": 2, "label": "Minas Gerais", "value": 2},
@@ -17,6 +19,8 @@
                             "id": 2,
                             "type": "ONE",
                             "answer": 2,
+                            "questionImage": "https://www.worldatlas.com/r/w960-q80/upload/4c/55/b8/untitled-design-163.jpg",
+                            "answerImage": "",
                             "options": [
                                 {"id": 1, "label": "360", "value": 1},
                                 {"id": 2, "label": "365", "value": 2},
@@ -29,6 +33,8 @@
                             "id": 3,
                             "type": "MULTI",
                             "answer": [2, 4],
+                            "questionImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png",
+                            "answerImage": "",
                             "options": [
                                 {"id": 1, "label": "AWS", "value": 1},
                                 {"id": 2, "label": "Drive", "value": 2},
@@ -41,6 +47,8 @@
                             "id": 4,
                             "type": "TEXT",
                             "answer": "SEUL",
+                            "questionImage": "",
+                            "answerImage": "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/11/apartamentos-em-seul-coreia-do-sul-para-comprar-1170x780.jpg.optimal.jpg",
                             "options": []
                         },
                         {
@@ -48,6 +56,8 @@
                             "id": 5,
                             "type": "TEXT",
                             "answer": "VATICAN",
+                            "questionImage": "",
+                            "answerImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg/1920px-St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg",
                             "options": []
                         },
                         {
@@ -55,6 +65,8 @@
                             "id": 6,
                             "type": "MULTI",
                             "answer": [1, 2, 4],
+                            "questionImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/South_America_-_Blue_Marble_orthographic.jpg/800px-South_America_-_Blue_Marble_orthographic.jpg",
+                            "answerImage": "",
                             "options": [
                                 {"id": 1, "label": "Chile", "value": 1},
                                 {"id": 2, "label": "Uruguay", "value": 2},
@@ -67,6 +79,8 @@
                             "id": 7,
                             "type": "ONE",
                             "answer": 1,
+                            "questionImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202407/apollo-11-moon-landing-190417148-16x9_0.jpg?VersionId=Hkrlq9ee2i_lY8Ul7yoDOAqIek_C1CF.&size=690:388",
+                            "answerImage": "",
                             "options": [
                                 {"id": 1, "label": "1969", "value": 1},
                                 {"id": 2, "label": "1958", "value": 2},
@@ -79,6 +93,8 @@
                             "id": 8,
                             "type": "ONE",
                             "answer": 4,
+                            "questionImage": "https://cdn.akamai.steamstatic.com/half-life.com/images/halflife2/halflife2_1.jpg",
+                            "answerImage": "",
                             "options": [
                                 {"id": 1, "label": "2010", "value": 1},
                                 {"id": 2, "label": "2006", "value": 2},
@@ -91,6 +107,8 @@
                             "id": 9,
                             "type": "ONE",
                             "answer": 1,
+                            "questionImage": "",
+                            "answerImage": "",
                             "options": [
                                 {"id": 1, "label": "215", "value": 1},
                                 {"id": 2, "label": "250", "value": 2},
@@ -103,6 +121,8 @@
                             "id": 10,
                             "type": "MULTI",
                             "answer": [2, 3],
+                            "questionImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/chris-ried-ieic5Tq8YMk-unsplas_1200x768.jpeg?size=690:388",
+                            "answerImage": "",
                             "options": [
                                 {"id": 1, "label": "JavaScript, Java, PHP", "value": 1},
                                 {"id": 2, "label": "Go, C#, Java", "value": 2},

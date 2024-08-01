@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import { Main } from './components/Main'
 import { Questions } from './components/Questions'
-import { PageHeader } from './components/PageHeader'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('main')
@@ -22,7 +21,6 @@ function App() {
                       isAnswered={isAnswered}
                       setAnswered={setAnswered}
                       setCurrentPage={setCurrentPage}/>
-      // pageHeader = <PageHeader />
       break;
   }
 

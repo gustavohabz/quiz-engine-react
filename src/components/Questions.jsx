@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { CustomRadio } from './InputComponents/CustomRadio'
 import QuestionJSON from './../questions/QuestionSet.json'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { CustomCheckbox } from './InputComponents/CustomCheckbox'
-import { CustomTextField } from './InputComponents/CustomTextField'
+import { FinalCardContent } from './FinalCardContent'
+import { ProgressBar } from './ProgressBar'
+import { QuestionForm } from './QuestionForm'
 
 export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAnswered, setCurrentPage}) => {
     const [questionNumber, setQuestionNumber] = useState(1)
@@ -23,11 +22,7 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
                 break;
             case 'checkbox':
                 if(e.target.checked){
-                    setChecboxAnswer(
-                        [
-                            ...checkboxAnswer, elementValue
-                        ]
-                    )
+                    setChecboxAnswer([...checkboxAnswer, elementValue])
                 }else{
                     const checkboxAnswerArray = checkboxAnswer.filter((c) => c !== elementValue)
                     setChecboxAnswer(checkboxAnswerArray)
@@ -68,9 +63,11 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
     }
 
     const validateCheckboxQuestion = (value, answer) => {
-        if(value.sort().join(',') === answer.sort().join(',')){
-            userSelectedCorrectAnswer()
-            return false
+        if(value.length > 0){
+            if(value.sort().join(',') === answer.sort().join(',')){
+                userSelectedCorrectAnswer()
+                return false
+            }
         }
         userSelectedWrongAnswer()
     }
@@ -83,26 +80,28 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
         setCorrectAnswer(false)
     }
 
+    const validateTextAnswer = (value, answer) => {
+        if(typeof value === 'string'){
+            if(answer === value.toUpperCase()){
+                userSelectedCorrectAnswer()
+            }else{
+                userSelectedWrongAnswer()
+            }
+        }
+    }
+
     const checkUserAnswer = (value) => {
         if(questionList.length > 0){
             const type = questionList[questionNumber-1].type
             const answer = questionList[questionNumber-1].answer
 
             if(type === 'MULTI'){
-                if(value.length > 0){
-                    validateCheckboxQuestion(value, answer)
-                }
+                validateCheckboxQuestion(value, answer)
                 return false;
             }
 
             if(type === 'TEXT'){
-                if(typeof value === 'string'){
-                    if(answer === value.toUpperCase()){
-                        userSelectedCorrectAnswer()
-                    }else{
-                        userSelectedWrongAnswer()
-                    }
-                }
+                validateTextAnswer(value, answer)
                 return false;
             }
 
@@ -174,120 +173,51 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
         }
     }, [textFieldAnswer])
 
+    const getColClass = (question) => {
+        return (question.type !== 'TEXT' ? 'col-6 col-xs-12' : 'col-12 col-xs-12')
+    }
+
+    const hideCurrentQuestion = (index) => {
+        return (index != questionNumber-1)
+    }
+
   return (
     <>
     {(questionNumber <= questionList.length ?  (<>
         {questionList.map((question, index) => (
-        <section key={question.id} hidden={index != questionNumber-1} className="question-section">
+        <section key={question.id} hidden={hideCurrentQuestion(index)} className="question-section">
             <div className="card-title text-center">
                 <h2>Question {questionNumber}: {question.question}</h2>
             </div>
             <div className="card-content">
-                <form onSubmit={(e) => confirmAnswerSubmit(e)}>
-                    <div className="row">
-                        <div className={question.type !== 'TEXT' ? 'col-6 col-xs-12' : 'col-12 col-xs-12'}>
-                            <h3>
-                                {question.type === "ONE" && (
-                                    <>
-                                        {question.options.map((option, indexOption) => (
-                                            <CustomRadio
-                                                key={option.id}
-                                                inputOptions={{name: 'radio-question'+index, id: 'radio-question'+indexOption+index, value: option.value, label: option.label}}
-                                                changeRadio={(e) => setUserAnswerAndCheck(e, question.answer)}
-                                                disabled={isAnswered}
-                                                answer={question.answer}
-                                                showCorrectAnswer={isAnswered && !isCorrectAnswer}
-                                                userAnswer={userAnswer}
-                                            />
-                                        ))}
-                                    </>
-                                    )
-                                }
-                                {question.type === "MULTI" && (
-                                    <>
-                                        {question.options.map((option, indexOption) => (
-                                            <CustomCheckbox 
-                                                key={option.id}
-                                                inputOptions={{name: 'checkbox-question'+index, id: 'checkbox-question'+indexOption+index, value: option.value, label: option.label}}
-                                                changeCheckbox={(e) => setUserAnswerAndCheck(e, question.answer)}
-                                                disabled={isAnswered}
-                                                answer={question.answer}
-                                                showCorrectAnswer={isAnswered && !isCorrectAnswer}
-                                                userAnswer={userAnswer}
-                                            />
-                                        ))}
-                                    </>
-                                    )
-                                }
-                                {question.type === "TEXT" && (
-                                    <>
-                                        <CustomTextField 
-                                            inputOptions={{name: 'textfield-question'+index, id: 'textfield-question'+index}}
-                                            disabled={isAnswered}
-                                            answer={question.answer}
-                                            showCorrectAnswer={isAnswered && !isCorrectAnswer}
-                                            userAnswer={userAnswer}
-                                            changeTextField={(e) => setUserAnswerAndCheck(e, question.answer)}
-                                        />
-                                    </>
-                                    )
-                                }
-                            </h3>
-                        </div>
-                    </div>
-                    <div className="row">
-                        {!isAnswered && (
-                            <div className="col-12 col-xs-12 text-right">
-                                <button 
-                                    type="submit"
-                                    className='btn btn-teal btn-lg rounded'
-                                    onClick={confirmAnswer}
-                                    disabled={!userAnswer || isAnswered}
-                                >
-                                    Answer &nbsp;
-                                    <FontAwesomeIcon icon="check"/>
-                                </button>
-                            </div>
-                        )}
-                        {isAnswered && (
-                            <div className="col-12 col-xs-12 text-right">
-                                <button 
-                                    className='btn btn-teal btn-lg rounded'
-                                    onClick={goToNextQuestion}
-                                >
-                                    Next &nbsp;
-                                    <FontAwesomeIcon icon="arrow-right"/>
-                                </button>
-                            </div>
-                        )}
-                    </div>
-                </form>
+                <QuestionForm 
+                    confirmAnswerSubmit={confirmAnswerSubmit}
+                    getColClass={getColClass}
+                    question={question}
+                    index={index}
+                    isAnswered={isAnswered}
+                    isCorrectAnswer={isCorrectAnswer}
+                    userAnswer={userAnswer}
+                    setUserAnswerAndCheck={setUserAnswerAndCheck}
+                    confirmAnswer={confirmAnswer}
+                    goToNextQuestion={goToNextQuestion}
+                />
             </div>
         </section>
         ))}
     </>) : (
         <>
-            <div className="row" style={{paddingTop: '1.5%'}}>
-                <div className="col-12 text-center">
-                    <h1>Correct Answers: {correctAnswerCounter}</h1>
-                    <h1>Wrong Answers: {wrongAnswerCounter}</h1>
-                    <button 
-                        className="btn btn-teal rounded btn-lg"
-                        onClick={resetGame}    
-                    >
-                        Play Again
-                    </button>
-                </div>
-            </div>
+            <FinalCardContent 
+                correctAnswerCounter={correctAnswerCounter}
+                wrongAnswerCounter={wrongAnswerCounter}
+                resetGame={resetGame}
+            />
         </>
     ))}
-    <div className="row mt-2">
-        <div className="col-12 col-xs-12">
-            <div className="progress">
-                <div className={"progress-bar "+(questionNumber*questionList.length -1 < 100 ? "progress-blue" : "progress-teal")} style={{width: questionNumber*questionList.length - 1+'%'}}></div>
-            </div>
-        </div>
-    </div>
+    <ProgressBar 
+        questionNumber={questionNumber}
+        questionListLength={questionList.length}
+    />
     </>
   )
 }

@@ -569,6 +569,11 @@ input:focus{
   min-width: 200px;
 }
 
+.btn-technology:hover {
+  background-color: #3ac7b9;
+  border-color: #3ac7b9;
+}
+
 .btn-history {
   background-color: #40DE75;
   border-color: #40DE75;
@@ -580,6 +585,11 @@ input:focus{
   transform: translate(0%, -50%);
   max-width: 200px;
   min-width: 200px;
+}
+
+.btn-history:hover {
+  background-color: #37bd64;
+  border-color: #37bd64;
 }
 
 .btn-animals {
@@ -594,6 +604,11 @@ input:focus{
   transform: translate(0%, 100%);
   max-width: 200px;
   min-width: 200px;
+}
+
+.btn-animals:hover {
+  background-color: #3e4d4c;
+  border-color: #3e4d4c;
 }
 
 @media screen and (max-width: 992px){

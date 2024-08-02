@@ -24,16 +24,14 @@ export const ThemeSelection = ({setCurrentPage, setTheme}) => {
         </div>
         <div className="card-content theme-section">
             <div className="buttons-themes">
-                <span className="button-effect">
-                    <button 
-                            className={'btn-themes btn-geography '+clickedThemeClass.GEOGRAPHY}
-                            onClick={() => goToQuestions('GEOGRAPHY')}
-                            disabled={clickedButton}
-                        >
-                        GEOGRAPHY &nbsp;
-                        <FontAwesomeIcon icon={faGlobe} />
-                    </button>
-                </span>
+                <button 
+                        className={'btn-themes btn-geography '+clickedThemeClass.GEOGRAPHY}
+                        onClick={() => goToQuestions('GEOGRAPHY')}
+                        disabled={clickedButton}
+                    >
+                    GEOGRAPHY &nbsp;
+                    <FontAwesomeIcon icon={faGlobe} />
+                </button>
                 <button 
                     className={'btn-themes btn-history '+clickedThemeClass.HISTORY}
                     onClick={() => goToQuestions('HISTORY')}

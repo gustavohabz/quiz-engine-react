@@ -3,8 +3,8 @@ body {
 }
 
 .card {
-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
-border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+  border: none;
 }
 
 .text-left {
@@ -67,6 +67,9 @@ border: none;
 }
 
 @media screen and (max-width: 992px){
+  .answerText {
+    position: inherit;
+  }
   .col-xs-10 {
     width: 83.3%;
   }
@@ -98,7 +101,7 @@ border: none;
   }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 993px){
   .answer-text {
     position: absolute;
   }
@@ -306,24 +309,52 @@ border: none;
   display: block;
 }
 
-@keyframes fadeIn {
-  0% {
+@keyframes alertAnimation {
+  0%{
     opacity: 0;
   }
-  100% {
+  100%{
     opacity: 1;
   }
 }
 
-.alert {
-  position: absolute;
-  width: 90%;
-  border: 1px solid;
-  border-color: rgba(124, 124, 124, 0.253);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.250);
-  font-weight: 300;
-  padding: 5%;
-  animation: fadeIn ease 0.5s;
+@media screen and (min-width: 993px){
+  .alert-position {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+  }
+
+  .alert {
+    border: 1px solid;
+    border-color: rgba(124, 124, 124, 0.123);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.250);
+    font-weight: 300;
+    padding: 3.5%;
+    animation-duration: 0.5s;
+    animation-name: alertAnimation;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .alert-position {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+  }
+  .alert {
+    border: 1px solid;
+    border-color: rgba(124, 124, 124, 0.123);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.250);
+    font-weight: 300;
+    padding: 3.5%;
+    animation-duration: 0.5s;
+    animation-name: alertAnimation;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
 }
 
 @-webkit-keyframes slide {
@@ -370,6 +401,14 @@ border: none;
   color: #000000;
 }
 
+.mb-2{
+  margin-bottom: 3%;
+}
+
+.mt-1{
+  margin-top: 1%
+}
+
 .mt-2{
   margin-top: 3%
 }
@@ -396,26 +435,53 @@ input:focus{
   outline: none;
 }
 
-.image-frame img{
-  width: 100%;
-  height: 100%;
-  max-height: 200px;
-  max-width: 200px;
-  min-height: 100px;
-  min-width: 180px;
-  filter: drop-shadow(4px 4px 4px #00000056);
+
+.placeholder-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 330px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+}
+
+@media screen and (min-width: 993px){
+  .image-frame {
+    max-height: 330px;
+  }
+  
+  .image-frame img{
+    margin: 0 auto;
+    max-height: 330px;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(4px 4px 4px #00000056);
+  }
+}
+
+@media screen and (max-width: 992px){
+  .image-frame img{
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(4px 4px 4px #00000056);
+  }
 }
 
 .main-title {
   filter: drop-shadow(4px 4px 4px #00000028);
 }
 
-.btn-geography {
- background-color: #DE9F40;
- border-color: #DE9F40;
- min-width: 10em;
- height: 4em;
- border-radius: 50px 0px 0px 0px;
+.btn-themes {
+  border: 2px solid black;
+  color: black;
+  cursor: pointer;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  transition: all 0.5s ease;
+  filter: drop-shadow(8px 8px 8px #00000028);
 }
 
 .btn-geography:hover {
@@ -423,26 +489,190 @@ input:focus{
   border-color: #ca903a;
  }
 
-.btn-history {
-  background-color: #40DE75;
-  border-color: #40DE75;
-  height: 4em;
-  border-radius: 0px 50px 0px 0px;
+ @keyframes changeButtonPos {
+  from {
+    opacity: 1;
+    z-index: 9999;
+    top: 50%;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+    top: 0%;
+    border-radius: 100% 100% 100% 100%;
+  }
+}
+
+@keyframes changeButtonPosBellow {
+  from {
+    opacity: 1;
+    z-index: 9999;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+    border-radius: 100% 100% 100% 100%;
+  }
+}
+
+.theme-selection-btn-animation-geography {
+  animation-duration: 1s;
+  animation-name: changeButtonPos;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.theme-selection-btn-animation-history {
+  animation-duration: 1s;
+  animation-name: changeButtonPos;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.theme-selection-btn-animation-technology {
+  animation-duration: 1s;
+  animation-name: changeButtonPosBellow;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.theme-selection-btn-animation-animals {
+  animation-duration: 1s;
+  animation-name: changeButtonPosBellow;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.btn-geography {
+  background-color: #DE9F40;
+  border-color: #DE9F40;
+  height: 200px;
+  border-radius: 50% 0px 0px 0px;
+  position: absolute; 
+  left: 50%;
+  top: 50%;
+  max-width: 400px;
+  min-width: 200px;
+  transform: translate(-100%, -50%);
 }
 
 .btn-technology {
   background-color: #40DECE;
   border-color: #40DECE;
-  height: 4em;
-  border-radius: 0px 0px 0px 50px;
+  height: 200px;
+  position: absolute; 
+  left: 50%;
+  top: 34.50%;
+  transform: translate(-100%, 100%);
+  border-radius: 0px 0px 0px 50%;
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.btn-history {
+  background-color: #40DE75;
+  border-color: #40DE75;
+  border-radius: 0px 50% 0px 0px;
+  height: 200px;
+  position: absolute; 
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  max-width: 200px;
+  min-width: 200px;
 }
 
 .btn-animals {
   background-color: #4B5E5C;
   border-color: #4B5E5C;
   color: #ffffff;
-  height: 4em;
-  border-radius: 0px 0px 50px 0px;
+  border-radius: 0px 0px 50% 0px;
+  height: 200px;
+  position: absolute; 
+  left: 50%;
+  top: 34.5%;
+  transform: translate(0%, 100%);
+  max-width: 200px;
+  min-width: 200px;
 }
+
+@media screen and (max-width: 992px){
+  .btn-geography {
+    background-color: #DE9F40;
+    border-color: #DE9F40;
+    height: 180px;
+    border-radius: 50% 0px 0px 0px;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+  }
+  
+  .btn-technology {
+    background-color: #40DECE;
+    border-color: #40DECE;
+    height: 150px;
+    position: absolute; 
+    left: 50%;
+    top: 34.50%;
+    transform: translate(-100%, 100%);
+    border-radius: 0px 0px 0px 50%;
+  }
+  
+  .btn-history {
+    background-color: #40DE75;
+    border-color: #40DE75;
+    border-radius: 0px 50% 0px 0px;
+    height: 180px;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  
+  .btn-animals {
+    background-color: #4B5E5C;
+    border-color: #4B5E5C;
+    color: #ffffff;
+    border-radius: 0px 0px 50% 0px;
+    height: 150px;
+    position: absolute; 
+    left: 50%;
+    top: 34.5%;
+    transform: translate(0%, 100%);
+  }
+}
+
 .buttons-themes {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.buttons-themes button{
+  font-size: 20px;
+}
+
+.theme-section {
+  padding-bottom: 450px;
+}
+
+
+@keyframes showImage {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.question-answered{
+  animation-duration: 1s;
+  animation-name: showImage;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.question-not-answered {
+  opacity: 0;
 }

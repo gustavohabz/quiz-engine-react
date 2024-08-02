@@ -20,7 +20,7 @@ export const CustomTextField = ({
             onChange={changeTextField}
             placeholder="My Answer"
           />
-          <p className="answerText">{showCorrectAnswer && 'The answer is: '+answer}</p>
+          <p className="answer-text">{showCorrectAnswer && 'The answer is: '+answer}</p>
       </div>
     </>
   )

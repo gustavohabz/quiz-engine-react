@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import QuestionJSON from './../questions/QuestionSet.json'
-import QuestionThemesJSON from './../questions/QuestionSetThemes.json'
 import { FinalCardContent } from './FinalCardContent'
 import { ProgressBar } from './ProgressBar'
 import { QuestionForm } from './QuestionForm'
+import QuestionThemesJSON from './../questions/QuestionSetThemes.json'
 
 export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAnswered, setCurrentPage, theme}) => {
     const [questionNumber, setQuestionNumber] = useState(1)
@@ -174,10 +173,6 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
         }
     }, [textFieldAnswer])
 
-    const getColClass = (question) => {
-        return (question.type !== 'TEXT' ? 'col-6 col-xs-12' : 'col-12 col-xs-12')
-    }
-
     const hideCurrentQuestion = (index) => {
         return (index != questionNumber-1)
     }
@@ -193,7 +188,6 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
             <div className="card-content">
                 <QuestionForm 
                     confirmAnswerSubmit={confirmAnswerSubmit}
-                    getColClass={getColClass}
                     question={question}
                     index={index}
                     isAnswered={isAnswered}

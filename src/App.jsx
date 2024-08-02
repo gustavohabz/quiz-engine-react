@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { Main } from './components/Main'
 import { Questions } from './components/Questions'
 import { ThemeSelection } from './components/ThemeSelection'
+import QuestionThemesJSON from './questions/QuestionSetThemes.json'
+import { loadImages } from './ImagePreload'
+import { Alert } from './components/Alert'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('main')
@@ -32,20 +35,25 @@ function App() {
 
   const messageClass = (isCorrectAnswer ? 'alert-success' : 'alert-error')
 
-  const answerElement = <div className={"text-center mt-2 alert "+messageClass}>
-                            { isCorrectAnswer ? 'Correct answer!' : 'Incorrect answer!'}
-                        </div>
+  const answerElement = <Alert messageClass={messageClass} isCorrectAnswer={isCorrectAnswer}/>
+
+  useEffect(() => {
+    if(theme){
+      const images = QuestionThemesJSON.themes[theme].filter((question) => {
+        return question.questionImage || question.answerImage
+      }).map(q => q.questionImage || q.answerImage)
+      loadImages(images)
+    }
+  }, [theme])
 
   return (
     <main >
+      {(isAnswered ? answerElement : '')}
       <div className="row">
         <div className="center-vertical-horizontal">
           <div className="card rounded card-spacing">
             {pageHeader}
             {pageContent}
-          </div>
-          <div className="row">
-            {(isAnswered ? answerElement : '')}
           </div>
         </div>
       </div>

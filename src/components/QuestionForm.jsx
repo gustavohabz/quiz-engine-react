@@ -4,10 +4,11 @@ import { CustomCheckbox } from './InputComponents/CustomCheckbox'
 import { CustomTextField } from './InputComponents/CustomTextField'
 import { ButtonAnswer } from './InputComponents/ButtonAnswer'
 import { ButtonNext } from './InputComponents/ButtonNext'
+import { QuestionAnswerImage } from './QuestionAnswerImage'
+import { QuestionImage } from './QuestionImage'
 
 export const QuestionForm = ({
     confirmAnswerSubmit,
-    getColClass,
     question,
     index,
     isAnswered,
@@ -20,25 +21,14 @@ export const QuestionForm = ({
   return (
     <form onSubmit={(e) => confirmAnswerSubmit(e)}>
         {(question.questionImage && (
-            <div className={getColClass(question)}>
-                <div className='image-frame'>
-                    <figure>
-                        <img loading="lazy" src={question.questionImage} alt="" />
-                    </figure>
-                </div>
-            </div>
+            <QuestionImage url={question.questionImage}/>
         ))}
-        {(isAnswered && question.answerImage && !question.questionImage && (
-            <div className={getColClass(question)}>
-                <div className='image-frame'>
-                    <figure>
-                        <img loading="lazy" src={question.answerImage} alt="" />
-                    </figure>
-                </div>
-            </div>
+        
+        {(question.answerImage && !question.questionImage && (
+            <QuestionAnswerImage isAnswered={isAnswered} url={question.answerImage}/>
         ))}
         <div className="row">
-            <div className={getColClass(question)}>
+            <div className='col-12 col-xs-12'>
                 <h3>
                     {question.type === "ONE" && (
                         <>

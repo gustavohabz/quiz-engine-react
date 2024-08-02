@@ -1,0 +1,43 @@
+$customFont: 'Roboto';
+$mobileWidth: 992px;
+$desktopWidth: 993px;
+
+body{
+    font: 100% $customFont;
+}
+  
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+@media screen and (min-width: $desktopWidth){
+      .col-12 {
+        width: 100%;
+      }
+}
+
+@media screen and (max-width: $mobileWidth){
+    .col-xs-12 {
+        width: 100%;
+    }
+}
+
+.mt-1{
+    margin-top: 1%
+}
+
+.main-title {
+    filter: drop-shadow(4px 4px 4px #00000028);
+}
+
+.block {
+    display: block;
+}

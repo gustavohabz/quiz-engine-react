@@ -1,4 +1,4 @@
-import React from 'react'
+import './../../styles/input.scss'
 
 export const CustomRadio = ({
   inputOptions, 

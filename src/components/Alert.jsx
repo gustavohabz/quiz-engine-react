@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const Alert = ({isCorrectAnswer, messageClass}) => {
   return (
       <div className="alert-position">

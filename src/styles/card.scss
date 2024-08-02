@@ -1,0 +1,62 @@
+$mobileWidth: 992px;
+$desktopWidth: 993px;
+$cardBoxShadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+
+.card {
+    box-shadow: $cardBoxShadow;
+    border: none;
+}
+  
+.card-content {
+    padding-bottom: 3.5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.card-title {
+    margin-bottom: 6em;
+    padding-top: 2.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+}
+
+.card-title h2 {
+    font-weight: 500;
+}
+
+@media screen and (max-width: $mobileWidth){
+    .card-content {
+        padding-bottom: 3.5%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .card-title {
+        margin-bottom: 6em;
+        padding-top: 2.5%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .center-vertical-horizontal {
+        margin: 0;
+        top: 50%;
+        left: 8.3%;
+        width: 83.4%;
+        position: absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    } 
+}
+
+@media screen and (min-width: $desktopWidth){
+    .center-vertical-horizontal {
+        margin: 0;
+        top: 50%;
+        left: 30%;
+        width: 40%;
+        position: absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}

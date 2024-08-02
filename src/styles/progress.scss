@@ -1,0 +1,29 @@
+.progress {
+    display: flex;
+    overflow: hidden;
+    font-size: .75rem;
+}
+  
+.progress-blue {
+    background-color: #00b7ff;
+    color: #fff;
+}
+  
+.progress-teal {
+    background-color: teal;
+    color: #fff;
+}
+  
+.progress-bar {
+    display: flex;
+    height: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    transition: width .6s ease;
+}

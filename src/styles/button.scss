@@ -1,0 +1,47 @@
+$btnBoxShadow: 4px 4px 4px rgba(0, 0, 0, 0.150);
+$btnTealPrimaryColor: teal;
+$btnTealHoverColor: rgb(0, 109, 109);
+$btnTealDisabledColor: rgb(63, 117, 117);
+$white: #ffffff;
+
+.btn {
+	border: 2px solid black;
+	color: black;
+	cursor: pointer;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	box-shadow: $btnBoxShadow;
+	transition: all 0.5s ease;
+}
+  
+.btn-teal {
+	background-color: $btnTealPrimaryColor;
+	border-color: $btnTealPrimaryColor;
+	color: $white;
+}
+
+.btn-teal:hover {
+	background-color: $btnTealHoverColor;
+	border-color: $btnTealHoverColor;
+	color: $white;
+}
+
+.btn-teal:disabled{
+	cursor: auto;
+	background-color: $btnTealDisabledColor;
+	border-color: $btnTealDisabledColor;
+	color: $white;
+}
+
+.btn-teal:disabled:hover{
+	cursor: auto;
+	background-color: $btnTealDisabledColor;
+	border-color: $btnTealDisabledColor;
+	color: $white;
+}
+
+.btn-lg {
+	padding: 12px;
+	padding-right: 40px;
+	padding-left: 40px;
+}

@@ -1,0 +1,46 @@
+@media screen and (max-width: 992px){
+	.btn-geography {
+		background-color: #DE9F40;
+		border-color: #DE9F40;
+		height: 180px;
+		border-radius: 50% 0px 0px 0px;
+		position: absolute; 
+		left: 50%;
+		top: 50%;
+		transform: translate(-100%, -50%);
+	}
+	
+	.btn-technology {
+		background-color: #40DECE;
+		border-color: #40DECE;
+		height: 150px;
+		position: absolute; 
+		left: 50%;
+		top: 34.50%;
+		transform: translate(-100%, 100%);
+		border-radius: 0px 0px 0px 50%;
+	}
+	
+	.btn-history {
+		background-color: #40DE75;
+		border-color: #40DE75;
+		border-radius: 0px 50% 0px 0px;
+		height: 180px;
+		position: absolute; 
+		left: 50%;
+		top: 50%;
+		transform: translate(0%, -50%);
+	}
+	
+	.btn-animals {
+		background-color: #4B5E5C;
+		border-color: #4B5E5C;
+		color: #ffffff;
+		border-radius: 0px 0px 50% 0px;
+		height: 150px;
+		position: absolute; 
+		left: 50%;
+		top: 34.5%;
+		transform: translate(0%, 100%);
+	}
+}

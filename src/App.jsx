@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import { Main } from './components/Main'
 import { Questions } from './components/Questions'
 import { ThemeSelection } from './components/ThemeSelection'
 import QuestionThemesJSON from './questions/QuestionSetThemes.json'
 import { loadImages } from './ImagePreload'
 import { Alert } from './components/Alert'
+import './styles/card.scss'
+import './styles/progress.scss'
+import './styles/button.scss'
+import './styles/themeSelection.scss'
+import './styles/alert.scss'
+import './styles/question.scss'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('main')

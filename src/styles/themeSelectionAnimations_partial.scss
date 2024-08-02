@@ -1,0 +1,55 @@
+$maxBorder: 100% 100% 100% 100%;
+
+@keyframes changeButtonPos {
+  from {
+    opacity: 1;
+    z-index: 9999;
+    top: 50%;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+    top: 0%;
+    border-radius: $maxBorder;
+  }
+}
+
+@keyframes changeButtonPosBellow {
+  from {
+    opacity: 1;
+    z-index: 9999;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+    border-radius: $maxBorder;
+  }
+}
+
+.theme-selection-btn-animation-geography {
+	animation-duration: 1s;
+	animation-name: changeButtonPos;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+.theme-selection-btn-animation-history {
+	animation-duration: 1s;
+	animation-name: changeButtonPos;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+.theme-selection-btn-animation-technology {
+	animation-duration: 1s;
+	animation-name: changeButtonPosBellow;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+.theme-selection-btn-animation-animals {
+	animation-duration: 1s;
+	animation-name: changeButtonPosBellow;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}

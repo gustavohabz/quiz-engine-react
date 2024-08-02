@@ -1,0 +1,61 @@
+$alertBorderColor: rgba(124, 124, 124, 0.123);
+$alertBoxShadow: 4px 4px 4px rgba(0, 0, 0, 0.250);
+
+@keyframes alertAnimation {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (min-width: 993px){
+    .alert-position {
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      top: 5%;
+    }
+  
+    .alert {
+      border: 1px solid;
+      border-color: $alertBorderColor;
+      box-shadow: $alertBoxShadow;
+      font-weight: 300;
+      padding: 3.5%;
+      animation-duration: 0.5s;
+      animation-name: alertAnimation;
+      animation-fill-mode: forwards;
+      animation-direction: alternate;
+    }
+  }
+  
+  @media screen and (max-width: 992px){
+    .alert-position {
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 5%;
+    }
+    .alert {
+      border: 1px solid;
+      border-color: $alertBorderColor;
+      box-shadow: $alertBoxShadow;
+      font-weight: 300;
+      padding: 3.5%;
+      animation-duration: 0.5s;
+      animation-name: alertAnimation;
+      animation-fill-mode: forwards;
+      animation-direction: alternate;
+    }
+  }
+
+  
+.alert-success {
+    background-color: #4eca435e;
+}
+
+.alert-error {
+    background-color: #ca43435e;
+}

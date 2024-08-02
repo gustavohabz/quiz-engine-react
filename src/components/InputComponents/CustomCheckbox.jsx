@@ -1,5 +1,3 @@
-import './../../styles/input.scss'
-
 export const CustomCheckbox = (
   {inputOptions, changeCheckbox, disabled, answer, showCorrectAnswer}) => {
     let classCorrect = ' '

@@ -11,6 +11,7 @@ import './styles/button.scss'
 import './styles/themeSelection.scss'
 import './styles/alert.scss'
 import './styles/question.scss'
+import './styles/input.scss'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('main')

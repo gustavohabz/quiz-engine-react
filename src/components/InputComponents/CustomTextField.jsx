@@ -1,4 +1,3 @@
-import './../../styles/input.scss'
 export const CustomTextField = ({
   inputOptions, 
   disabled, 

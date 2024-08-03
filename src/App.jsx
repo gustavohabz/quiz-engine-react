@@ -20,7 +20,6 @@ function App() {
   const [theme, setTheme] = useState('')
 
   let pageContent = ''
-  let pageHeader = ''
   switch(currentPage){
     case 'main':
       pageContent = <Main setCurrentPage={setCurrentPage}/>
@@ -58,7 +57,6 @@ function App() {
       <div className="row">
         <div className="center-vertical-horizontal">
           <div className="card rounded card-spacing">
-            {pageHeader}
             {pageContent}
           </div>
         </div>

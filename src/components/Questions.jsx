@@ -167,10 +167,8 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
     }, [radioAnswer])
 
     useEffect(() => {
-        if(textFieldAnswer.length > 0){
-            checkUserAnswer(textFieldAnswer)
-            setUserAnswer(textFieldAnswer)
-        }
+        checkUserAnswer(textFieldAnswer)
+        setUserAnswer(textFieldAnswer)
     }, [textFieldAnswer])
 
     const hideCurrentQuestion = (index) => {
@@ -184,6 +182,9 @@ export const Questions = ({isCorrectAnswer, setCorrectAnswer, isAnswered, setAns
         <section key={question.id} hidden={hideCurrentQuestion(index)} className="question-section">
             <div className="card-title text-center">
                 <h2>Question {questionNumber}: {question.question}</h2>
+                {question.type === 'MULTI' && (
+                    <small>More than one option can be selected.</small>
+                )}
             </div>
             <div className="card-content">
                 <QuestionForm 

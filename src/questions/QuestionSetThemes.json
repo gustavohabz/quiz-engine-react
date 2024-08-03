@@ -449,7 +449,7 @@
                                             "question": "Which of these birds don't fly?",
                                             "id": 6,
                                             "type": "MULTI",
-                                            "answer": [1, 3],
+                                            "answer": [1, 2, 3],
                                             "questionImage": "",
                                             "answerImage": "",
                                             "options": [
